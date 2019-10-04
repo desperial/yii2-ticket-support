@@ -2,6 +2,12 @@
   "name": "desperial/yii2-ticket-support",
   "description": "Yii2 Support Ticket Module, easy, flexible, fast. And with fixes of font-awesome",
   "type": "yii2-extension",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/desperial/yii2-ticket-support"
+    }
+  ],
   "keywords": [
     "yii2",
     "support",
