@@ -75,7 +75,7 @@ class TicketController extends Controller
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $unansweredTickets = Ticket::find()->where(['status' => Ticket::STATUS_OPEN])->count();
-        $ticketsToday = Ticket::find()->where('created_at >= CURTADE()')->count();
+        $ticketsToday = Ticket::find()->where('created_at >= CURDATE()')->count();
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -95,7 +95,7 @@ class TicketController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         $unansweredTickets = Ticket::find()->where(['status' => Ticket::STATUS_OPEN])->count();
-        $ticketsToday = Ticket::find()->where('created_at >= CURTADE()')->count();
+        $ticketsToday = Ticket::find()->where('created_at >= CURDATE()')->count();
 
         return $this->render('manage', [
             'searchModel' => $searchModel,
