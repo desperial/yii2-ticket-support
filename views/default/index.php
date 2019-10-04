@@ -22,7 +22,7 @@ $this->title = \akiraz2\support\Module::t('support', 'Ticket System');
 
                 <div class="info-box-content">
                     <span class="info-box-text"><?= \akiraz2\support\Module::t('support', 'New Tickets Today');?></span>
-                    <span class="info-box-number">0</span>
+                    <span class="info-box-number"><?=$ticketsToday?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -35,7 +35,7 @@ $this->title = \akiraz2\support\Module::t('support', 'Ticket System');
 
                 <div class="info-box-content">
                     <span class="info-box-text"><?= \akiraz2\support\Module::t('support', 'Unanswered tickets');?></span>
-                    <span class="info-box-number">0</span>
+                    <span class="info-box-number"><?=$unansweredTickets?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>

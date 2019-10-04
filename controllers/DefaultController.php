@@ -55,7 +55,15 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $unansweredTickets = Ticket::find()->where(['status' => Ticket::STATUS_OPEN])->count();
+        $ticketsToday = Ticket::find()->where('created_at >= CURDATE()')->count();
+
+           
+        return $this->render('index',[
+            'unansweredTickets' => $unansweredTickets,
+            'ticketsToday' => $ticketsToday
+        ]);
     }
 
     public function actionFetchMail()
